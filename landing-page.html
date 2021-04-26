@@ -50,11 +50,23 @@
             </div>
         </div>
     </header>
-    <div class="hero-container">
-        <div class="hero-image">
+    <div class="slideshow-container">
+        <div class="slide-image visible-image">
             <img src="./img/two-plate-pasta.jpg" alt="">
         </div>
-        <div class="hero-text">
+        <div class="slide-image">
+            <img src="./img/burrata.jpg" alt="">
+        </div>
+        <div class="slide-image">
+            <img src="./img/pizza-lasagna.jpg" alt="">
+        </div>
+
+        <div class="slideshow-buttons">
+            <button id="slideshow-button-prev" aria-label="Previous image"><</button>
+            <button id="slideshow-button-next" aria-label="Next image">></button>
+        </div>
+        
+        <div class="slideshow-text">
             <h1>Pray Love Eat</h1>
             <p>- Since 1920 -</p>
         </div>
@@ -113,35 +125,31 @@
             </div>
             <div class="images-menu">
                 <div class="box-1 description-dish">
-                    <h2>Tomato Cheese Pasta</h2>
-                    <p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
+                    <h2 class="h2-tag-1"></h2>
+                    <p class="para-tag-1"></p>
                     <a href="#">VIEW FULL MENU</a>
                 </div>
                 <div class="box-2 image-dish">
-                    <img src="./img/pasta-calmaro.jpg" alt="">
                 </div>
                 <div class="box-3 description-dish">
-                    <h2>Grilled Meat Steack</h2>
-                    <p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
+                    <h2 class="h2-tag-3"></h2>
+                    <p class="para-tag-3"></p>
                     <a href="#">VIEW FULL MENU</a>
                 </div>
                 <div class="box-4 image-dish">
-                    <img src="./img/fish.jpg" alt="">
                 </div>
                 <div class="box-5 image-dish">
-                    <img src="./img/gnochi.jpg" alt="">
                 </div>
                 <div class="box-6 description-dish">
-                    <h2>Meatballs With Tomato</h2>
-                    <p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
+                    <h2 class="h2-tag-6"></h2>
+                    <p class="para-tag-6"></p>
                     <a href="#">VIEW FULL MENU</a>
                 </div>
                 <div class="box-7 image-dish">
-                    <img src="./img/meatballs.jpg" alt="">
                 </div>
                 <div class="box-8 description-dish">
-                    <h2>Spaghetti Meatballs</h2>
-                    <p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
+                    <h2 class="h2-tag-8"></h2>
+                    <p class="para-tag-8"></p>
                     <a href="#">VIEW FULL MENU</a>
                 </div>
             </div>
@@ -206,6 +214,7 @@
             </div>
         </section>
     </footer>
+    <script src="dinamicpage.js"></script>
 </body>
 
 </html>
