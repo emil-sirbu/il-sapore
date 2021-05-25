@@ -1,0 +1,246 @@
+.footer-container {
+    height: 450px;
+    background-image: linear-gradient(70deg, rgba(84, 84, 84, 1) 45%, rgba(198, 164, 113, 0.5) 100%);
+    background-size: cover;  
+}
+
+/* Top container */
+
+.top-cards-container {
+    margin: 20px 300px 70px 300px;
+}
+
+.top-cards-container>* {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.top-cards-container h3 {
+    margin-top: 35px;
+    margin-bottom: 40px;
+    font-size: 1.17em;
+    font-weight: bold;
+    line-height: initial;
+}
+
+.top-cards-container div:nth-child(n+2) p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Welcome card */
+
+.welcome-card {
+    padding-right: 50px;
+}
+
+.welcome-card a img {
+    width: 10em;
+    padding-top: 10px;
+}
+
+.welcome-card p {
+    margin: 22px 0 0 0;
+    line-height: 1.5;
+}
+
+.welcome-card p+img {
+    width: 10em;
+    padding-top: 5px;
+}
+
+/* Links card */
+
+.links-card {
+    padding-left: 40px;
+}
+
+.links-card a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Advent Pro', sans-serif;
+    line-height: 1.5;
+}
+
+.links-card a:hover {
+    color: #C6A471;
+    text-decoration: underline;
+}
+
+/* Address card */
+
+.footer-address-card a {
+    text-decoration: none;
+    color: #C6A471;
+    font-family: 'Advent Pro', sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+/* Program card */
+
+.program-hours-card span {
+    font-style: italic;
+    letter-spacing: 0.6px;
+}
+
+/* Newsletter card */
+
+.newsletter-card input[type=email], .newsletter-card input[type=submit] {
+    width: 190px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 8px;
+    outline: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    line-height: normal;
+}
+
+.newsletter-card input[type=submit] {
+    background-color: #000;
+    color: rgba(198, 164, 113, 0.9);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.newsletter-card input[type=submit]:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+/* Bottom container */
+
+.bottom-cards-subcontainer {
+    margin: 0 300px 0 300px;
+}
+
+/* Social media icons */
+
+.social-media-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media-icons a:hover {
+    color: #C6A471;
+}
+
+/* Author rights */
+
+.author-rights p {
+    color: #fff;
+    margin: 16px 0;
+}
+
+@media screen and (max-width: 1415px) {
+
+    .footer-container {
+        height: 750px;
+    }
+
+    .top-cards-container {
+        margin: 0 200px 70px 200px;
+    }
+
+    .links-card {
+        padding-left: 12px;
+    }
+
+    .bottom-cards-subcontainer {
+        margin: 0 200px 0 200px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .footer-container {
+        height: 850px;
+    }
+
+    .top-cards-container {
+        margin: 0 50px 70px 150px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    
+    .top-cards-container {
+        margin: 20px 40px 70px 100px;
+    }
+
+    .top-cards-container h3 {
+        font-size: 1em;
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+
+    /* Welcome card */
+
+    .welcome-card {
+        padding-right: 20px;
+    }
+
+    .welcome-card a img {
+        width: 9em;
+        padding-top: 5px;
+    }
+
+    .welcome-card p {
+        font-size: 0.9em;
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+
+    .welcome-card p+img {
+        width: 9em;
+        padding-top: 5px;
+    }
+    
+    /* Links & Address cards & <p> elements */
+
+    .links-card a,
+    .address-card a,
+    .top-cards-container div:nth-child(n+2) p {
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+
+    /* Bottom container */
+
+    .bottom-cards-subcontainer {
+        margin: 0 80px 0 80px;
+    }
+
+    /* Author rights */
+
+    .author-rights p {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .footer-container {
+        height: 950px;
+    }
+
+    .top-cards-container {
+        margin: 20px 30px 70px 30px;
+    }
+
+    .top-cards-container h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    /* Bottom container */
+
+    .bottom-cards-subcontainer {
+        margin: 0 40px 0 40px;
+    }
+}
