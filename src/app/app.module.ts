@@ -8,6 +8,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
+import { ApiMenuComponent } from './api-menu/api-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
     AboutUsComponent,
     ContactUsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SlideshowComponent,
+    ApiMenuComponent
   ],
   imports: [
     BrowserModule,
