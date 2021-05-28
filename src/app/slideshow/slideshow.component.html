@@ -1,19 +1,13 @@
 <div class="slideshow-container">
-    <div class="slide-image visible-image">
-        <img src="assets/img/two-plate-pasta.jpg" alt="">
+    <div class="slide-image visible-image" *ngFor="let slide of slides; let i=index">
+        <ng-container *ngIf="i === currentIndex">
+            <img [src]="slide.src">
+        </ng-container>
     </div>
-    <div class="slide-image">
-        <img src="assets/img/burrata.jpg" alt="">
-    </div>
-    <div class="slide-image">
-        <img src="assets/img/pizza-lasagna.jpg" alt="">
-    </div>
-
     <div class="slideshow-buttons">
-        <button id="slideshow-button-prev" aria-label="Previous image"><</button>
-                <button id="slideshow-button-next" aria-label="Next image">></button>
+        <button id="slideshow-button-prev" (click)="pre()" aria-label="Previous image"><</button>
+        <button id="slideshow-button-next" (click)="next()" aria-label="Next image">></button>
     </div>
-
     <div class="slideshow-text">
         <h1>Pray Love Eat</h1>
         <p>- Since 1920 -</p>

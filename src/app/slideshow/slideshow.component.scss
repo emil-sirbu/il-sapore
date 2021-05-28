@@ -93,7 +93,7 @@
     0% {
         opacity: 0;
       }
-      100% {
+    100% {
         opacity: 1;
         transform: opacity linear;
       }
@@ -103,28 +103,31 @@
 
 @media screen and (max-width: 1050px) {
     
-    .hero-text h1 {
+    .slideshow-text h1 {
         font-size: 3.5em;
     }
-    .hero-text p {
+    .slideshow-text p {
         font-size: 1.2em;
     }
 }
 
 @media screen and (max-width: 680px) {
 
+    .slideshow-buttons {
+        display: none;
+    }
     
-    .hero-text h1 {
+    .slideshow-text h1 {
         font-size: 3em;
     }
-    .hero-text p {
+    .slideshow-text p {
         font-size: 1em;
     }
 }
 
 @media screen and (max-width: 490px) {
 
-    .hero-text h1 {
+    .slideshow-text h1 {
        font-size: 2.5em;
    }
 }

@@ -9,9 +9,8 @@ import { FoodService } from '../food.service';
 export class MenuComponent implements OnInit {
   results: any[] = [];
 
-  constructor(private foodService: FoodService) {
+  constructor(private foodService: FoodService) { }
 
-  }
   ngOnInit(): void {
     this.foodService.getItems().then(
       data => {
