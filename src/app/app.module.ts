@@ -9,7 +9,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
-import { ApiMenuComponent } from './api-menu/api-menu.component';
+import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { ApiMenuComponent } from './api-menu/api-menu.component';
     HeaderComponent,
     FooterComponent,
     SlideshowComponent,
-    ApiMenuComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
