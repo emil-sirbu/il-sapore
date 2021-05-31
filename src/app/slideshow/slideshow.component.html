@@ -1,6 +1,6 @@
 <div class="slideshow-container">
-    <div class="slide-image visible-image" *ngFor="let slide of slides; let i=index">
-        <ng-container *ngIf="i === currentIndex">
+    <div class="slide-image visible-image" *ngFor="let slide of slides; let imgIndex = index">
+        <ng-container *ngIf="imgIndex === currentIndex">
             <img [src]="slide.src">
         </ng-container>
     </div>

@@ -35,7 +35,7 @@ export class SlideshowComponent implements OnInit {
     if (this.currentIndex < this.slides.length - 1) {
       this.currentIndex++
     } else {
-      this.currentIndex=0;
+      this.currentIndex = 0;
     }
   }
 
