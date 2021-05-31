@@ -1,0 +1,94 @@
+header {
+    top: 0;
+    left: 0; 
+    z-index: 20;
+}
+
+.logo-section img {
+    width: 15em;
+}
+
+.main-section {
+    width: 40%;
+}
+
+.main-section nav {
+    width: 70%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 20px 0 0;
+    margin: 16px 0 16px 0;
+}
+
+.menu-parent a {
+    padding: 10px 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1.8px;
+}
+
+.action-section {
+    width: 30%;
+}
+
+.book-parent {
+    border: 2px solid #fff;
+    text-decoration: none;
+    padding: 17px 10px;
+}
+
+.book-parent img {
+    width: 1em;
+}
+
+.book-parent h3 {
+    margin: 0 0 0 10px;
+    color: #fff;
+    letter-spacing: 1.8px;
+    font-size: initial;
+    font-weight: bold;
+    line-height: initial;
+}
+
+.menu-parent a:hover {
+    color: #545454;
+}
+
+.book-parent:hover {
+    border: 2px solid #545454;
+}
+
+@media screen and (max-width: 1415px) {
+
+    .menu-parent a {
+        font-size: 1em;
+        letter-spacing: 1px;
+        padding: 10px 5px;
+    }
+    .book-parent h3 {
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+   
+    .burger-menu img {
+        width: 3em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .logo-section img {
+        width: 11em;
+    }
+
+    .burger-menu img {
+        width: 2.5em;
+    }
+}

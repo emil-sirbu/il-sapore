@@ -1,0 +1,147 @@
+/* Menu container */
+
+.menu-container {
+    margin: 7.98% 7.98%;
+}
+
+/* Menu text container */
+
+.like-button-style {
+    padding: 10px;
+    background-color: rgba(198, 164, 113, 0.2);
+    border-radius: 30px;
+    font-size: 1.2em;
+}
+
+.text-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.text-menu p {
+    width: 40%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: #545454;
+}
+
+.text-menu h1 {
+    margin: 20px 0;
+    font-size: 2.2em;
+    line-height: 1.3;
+}
+
+/* Menu images container */
+
+.images-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 150px;
+    box-shadow: 0px 1px 40px 1px rgba(207, 207, 207, 0.5);
+}
+
+.images-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description-dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 40px;
+}
+
+.description-dish h2 {
+    margin: 0 0 20px 0;
+}
+
+.description-dish p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+.description-dish a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    color: rgba(198, 164, 113, 1);
+}
+
+@media screen and (max-width: 1415px) {
+    .images-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* Menu text container */
+    .text-menu h1 {
+        font-size: 1.8em;
+    }
+    /* Menu images container */
+    .images-menu {
+        margin: 0 120px;
+    }
+     .description-dish {
+        padding: 20px 20px;
+    }
+    .description-dish h2 {
+        font-size: 1.2em;
+    }
+    .description-dish p {
+        font-size: 0.9em;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    .description-dish a {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    /* Menu container */
+
+    .menu-container {
+        margin-bottom: 100px;
+    }
+
+    /* Menu text container */
+    .text-menu p {
+        width: 80%;
+    }
+
+    /* Menu images container */
+    .images-menu {
+        margin: 0 0;
+    }
+
+    .description-dish {
+        padding: 12px 12px;
+    }
+
+    .description-dish h2 {
+        font-size: 1em;
+    }
+    .description-dish p {
+        font-size: 0.8em;
+    }
+    .description-dish a {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 490px) {
+    .text-menu p {
+        font-size: 1em;
+    }
+}

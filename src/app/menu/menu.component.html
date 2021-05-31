@@ -1,0 +1,20 @@
+<section class="menu-container">
+    <div class="text-menu">
+        <span class="like-button-style">Our Specials</span>
+        <h1>Today's Special</h1>
+        <p>The time has come to bring those ideas and plans to life. This is where we really begin to visualize.
+        </p>
+    </div>
+    <div class="images-menu" *ngFor="let group of results">
+        <ng-container *ngFor="let result of group">
+            <div class="box-1 description-dish" >
+                <h2 class="h2-tag-1">{{ result.title }}</h2>
+                <p class="para-tag-1"></p>
+                <a href="#">VIEW FULL MENU</a>
+            </div>
+            <div class="box-2 image-dish">
+                <img src="{{ result.image }}">
+            </div>
+        </ng-container>
+    </div>
+</section>
