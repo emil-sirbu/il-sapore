@@ -1,3 +1,38 @@
+.fixed-navbar {
+    opacity: 0;
+    background-color: #fff;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 .5em rgba(198, 164, 113, 0.3);
+
+    .logo-section img {
+        width: 10em;
+    }
+
+    .menu-parent a, 
+    .book-parent h3,
+    .action-section .svg-icon {
+        color: #C6A471;
+    }
+    
+    .book-parent {
+        border: 2px solid #C6A471;
+    }
+    
+    .menu-parent a:hover {
+        color: #545454;
+    }
+    
+    .book-parent:hover {
+        border: 2px solid #545454;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 header {
     top: 0;
     left: 0; 
@@ -5,7 +40,7 @@ header {
 }
 
 .logo-section img {
-    width: 15em;
+    width: 13em;
 }
 
 .main-section {
@@ -41,8 +76,11 @@ nav ul {
     padding: 17px 10px;
 }
 
-.book-parent img {
+.book-parent .svg-icon {
+    color: #fff;
+    font-size: 1em;
     width: 1em;
+    height: 1em;
 }
 
 .book-parent h3 {
@@ -85,7 +123,7 @@ nav ul {
 @media screen and (max-width: 680px) {
 
     .logo-section img {
-        width: 11em;
+        width: 10em;
     }
 
     .burger-menu img {
