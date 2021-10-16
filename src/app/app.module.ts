@@ -13,6 +13,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MenuPageComponent } from './menu-page/menu-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,19 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FooterComponent,
     SlideshowComponent,
     MenuComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    MenuPageComponent,
+  ],
+  entryComponents: [
+    MenuPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

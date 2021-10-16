@@ -1,0 +1,257 @@
+/* || Hero image */
+
+.hero-container {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.hero-image::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(198, 164, 113, 0.8) 100%, rgba(207, 207, 207, 1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+/* Menu container */ 
+
+.menu-container {
+    margin: 7.98% 7.98%;
+}
+
+/* Menu text container */
+
+.text-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.text-menu p {
+    width: 40%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: #545454;
+}
+
+.text-menu h1 {
+    margin: 20px 0;
+    font-size: 2.2em;
+    line-height: 1.3;
+}
+
+/* Recipe type */
+
+.recipe-type {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.recipe-type span {
+    padding: 10px 20px;
+    background-color: rgba(198, 164, 113, 0.2);
+    border-radius: 30px;
+    font-size: 1.5em;
+}
+
+/* Menu images container */
+
+#pizza {
+    margin-bottom: 120px;
+}
+
+.images-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 15px;
+    padding: 15px;
+    box-shadow: 0px 1px 40px 1px rgba(207, 207, 207, 0.5);
+}
+
+.images-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description-dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.description-dish h2 {
+    margin: 0 0 20px 0;
+}
+
+.description-dish p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1415px) {
+    /* Menu images container */
+
+    .images-menu {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 150px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* Menu text container */
+
+    .text-menu h1 {
+        font-size: 1.8em;
+    }
+
+    /* Menu images container */
+
+    .images-menu {
+        margin: 0 0;
+    }
+
+     .description-dish {
+        padding: 20px 20px;
+    }
+
+    .description-dish h2 {
+        font-size: 1.2em;
+    }
+
+    .description-dish p {
+        font-size: 0.9em;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    /* Hero image */
+
+    .hero-text h1 {
+        font-size: 3em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    /* Menu container */
+
+    .menu-container {
+        margin-bottom: 100px;
+    }
+
+    /* Menu text container */
+
+    .text-menu p {
+        width: 80%;
+    }
+
+    /* Recipe type */
+
+    .recipe-type span {
+        font-size: 1.2em;
+    }
+
+    /* Menu images container */
+
+    #pizza {
+        margin-bottom: 80px;
+    }
+
+    .description-dish {
+        padding: 12px 12px;
+    }
+
+    .description-dish h2 {
+        font-size: 1em;
+    }
+
+    .description-dish p {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 490px) {
+    /* Hero image */
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    /* Menu container */
+
+    .menu-container {
+        margin: 25px 20px 80px 20px;
+    }
+
+    /* Menu text container */
+     
+    .text-menu p {
+        font-size: 1em;
+    }
+
+    /* Menu images container */
+
+    .images-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .description-dish {
+        padding: 12px 12px 0 12px;
+    }
+
+    .images-menu img{
+        padding-bottom: 15px;
+    }
+
+}
