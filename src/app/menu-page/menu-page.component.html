@@ -1,0 +1,54 @@
+<div class="hero-container">
+    <div class="hero-image">
+        <img src="/assets/img/restaurant-table-landscape.jpg" alt="">
+    </div>
+    <div class="hero-text">
+        <h1>With Love From Italy</h1>
+        <p>- Since 1920 -</p>
+    </div>
+</div>
+<main>
+    <section class="menu-container">
+        <div class="text-menu">
+            <h1>Our Menu</h1>
+            <p>The time has come to bring those ideas and plans to life. This is where we really begin to visualize.
+            </p>
+        </div>
+        <div class="recipe-type">
+            <span>Pizza</span>
+        </div>
+        <div id="pizza" class="images-menu">
+            <ng-container *ngFor="let pizza of pizzas; let i=index">
+                <div class="description-dish" >
+                    <h2>{{ pizza.title | titlecase}}</h2>
+                    <div class="ingredients-list">
+                        <div *ngFor="let ingredient of pizza.missedIngredients">
+                            <p>{{ingredient.name | titlecase}},&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ pizza.image }}">
+                </div>
+            </ng-container>
+        </div>
+        <div class="recipe-type">
+            <span>Pasta</span>
+        </div>
+        <div id="pasta" class="images-menu">
+            <ng-container *ngFor="let pasta of pastas; let i=index">
+                <div class="description-dish">
+                    <h2>{{ pasta.title | titlecase}}</h2>
+                    <div class="ingredients-list">
+                        <div *ngFor="let ingredient of pasta.missedIngredients">
+                            <p>{{ingredient.name | titlecase}},&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ pasta.image }}">
+                </div>
+            </ng-container>
+        </div>
+    </section>
+</main>

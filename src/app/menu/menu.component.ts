@@ -7,30 +7,17 @@ import { FoodService } from '../food.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  results: any[] = [];
+  pastas: any[] = [];
 
   constructor(private foodService: FoodService) { }
 
   ngOnInit(): void {
-    this.foodService.getItems().then(
+    this.foodService.getPasta().then(
       data => {
-        this.results = this.chunk(data.results, 2);
+        this.pastas = data.results;
       },
       msg => console.error(`Error: ${msg.status} ${msg.statusText}`)
     );
-  }
-
-  private chunk(arr: any[], chunkSize: number): any[] {
-    if (chunkSize <= 0) {
-      throw 'Invalid chunk size';
-    }
-
-    const R = [];
-    for (var i = 0, len = arr.length; i < len; i += chunkSize) {
-      R.push(arr.slice(i, i + chunkSize));
-    }
-
-    return R;
   }
 }
 

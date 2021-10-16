@@ -176,27 +176,7 @@
     }
     .reservation-card-child a {
         padding: 12px 30px;
-    }
-    /* Menu images container */
-    .images-menu {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .box-2 {
-        grid-column: 1;
-        grid-row: 1;
-    }
-    .box-1 {
-        grid-column: 2;
-        grid-row: 1;
-    }
-    .box-7 {
-        grid-column: 2;
-        grid-row: 4;
-    }
-    .box-8 {
-        grid-column: 1;
-        grid-row: 4;
-    }
+    }  
 }
 
 @media screen and (max-width: 1050px) {
@@ -240,28 +220,6 @@
     .reservation-card-child a {
         font-size: 0.9em;
     }
-    /* Menu text container */
-    .text-menu h1 {
-        font-size: 1.8em;
-    }
-    /* Menu images container */
-    .images-menu {
-        margin: 0 120px;
-    }
-     .description-dish {
-        padding: 20px 20px;
-    }
-    .description-dish h2 {
-        font-size: 1.2em;
-    }
-    .description-dish p {
-        font-size: 0.9em;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-    .description-dish a {
-        font-size: 0.8em;
-    }
 }
 
 @media screen and (max-width: 680px) {
@@ -288,37 +246,6 @@
         row-gap: 0;
         grid-auto-rows: minmax(300px, auto);
     }
-
-    /* Menu container */
-
-    .menu-container {
-        margin-bottom: 100px;
-    }
-
-    /* Menu text container */
-    .text-menu p {
-        width: 80%;
-    }
-
-    /* Menu images container */
-    .images-menu {
-        margin: 0 0;
-    }
-
-    .description-dish {
-        padding: 12px 12px;
-    }
-
-    .description-dish h2 {
-        font-size: 1em;
-    }
-    .description-dish p {
-        font-size: 0.8em;
-    }
-    .description-dish a {
-        font-size: 0.8em;
-    }
-
 }
 
 @media screen and (max-width: 490px) {
@@ -373,11 +300,4 @@
     .reservation-card-child p {
         text-align: center;
     }
-
-    /* Menu text container */
-
-    .text-menu p {
-        font-size: 1em;
-    }
-
 }

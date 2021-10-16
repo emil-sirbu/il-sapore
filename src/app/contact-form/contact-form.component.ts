@@ -38,7 +38,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   get formInput() {
-    return this.form.controls
+    return this.form.controls;
   }
 
   submit(): void {
