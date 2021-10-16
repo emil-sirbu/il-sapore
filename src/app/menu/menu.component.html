@@ -5,15 +5,14 @@
         <p>The time has come to bring those ideas and plans to life. This is where we really begin to visualize.
         </p>
     </div>
-    <div class="images-menu" *ngFor="let group of results">
-        <ng-container *ngFor="let result of group">
-            <div class="box-1 description-dish" >
-                <h2 class="h2-tag-1">{{ result.title }}</h2>
-                <p class="para-tag-1"></p>
-                <a href="#">VIEW FULL MENU</a>
+    <div class="images-menu">
+        <ng-container *ngFor="let pasta of pastas">
+            <div class="description-dish" >
+                <h2>{{ pasta.title | titlecase}}</h2>
+                <a routerLink="/menu">VIEW FULL MENU</a>
             </div>
-            <div class="box-2 image-dish">
-                <img src="{{ result.image }}">
+            <div>
+                <img src="{{ pasta.image }}">
             </div>
         </ng-container>
     </div>

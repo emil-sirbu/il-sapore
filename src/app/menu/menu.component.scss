@@ -76,11 +76,47 @@
     font-family: 'Advent Pro', sans-serif;
     font-weight: 600;
     color: rgba(198, 164, 113, 1);
+    transform: translateZ(0);
+    transition-property: color;
+    transition-duration: 0.3s;
+    position: relative;
+    padding: 0.7em;
+    margin: 0 10px;
+}
+
+.description-dish a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #C6A471;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.description-dish a:hover {
+    color: white;
+}
+
+.description-dish a:hover::before {
+    transform: scaleY(1);
 }
 
 @media screen and (max-width: 1415px) {
+    /* Menu images container */
+    
     .images-menu {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .description-dish a {
+        margin: 0 15px;
     }
 }
 
@@ -140,6 +176,7 @@
         font-size: 0.8em;
     }
 }
+
 @media screen and (max-width: 490px) {
     .text-menu p {
         font-size: 1em;
