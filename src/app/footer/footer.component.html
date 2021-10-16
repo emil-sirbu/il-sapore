@@ -11,7 +11,7 @@
             <div class="links-card col">
                 <h3>Il Sapore</h3>
                 <a routerLink="#">Book a tabel</a>
-                <a routerLink="#">Menu</a>
+                <a routerLink="menu">Menu</a>
                 <a routerLink="about-us">About us</a>
                 <a routerLink="contact-us">Contact</a>
             </div>
@@ -33,12 +33,21 @@
             <div class="newsletter-card col">
                 <h3>Subscribe</h3>
                 <p>Delicious recipies directly to your inbox</p>
-                <div>
-                    <input type="email" name="mail" id="email" placeholder="Email address" required>
-                </div>
-                <div>
-                    <input type="submit" value="SUBSCRIBE">
-                </div>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div>
+                        <input type="email" name="mail" id="email" placeholder="Email address" [pattern]="emailPattern" formControlName="email">
+                        <div
+                          *ngIf="email.invalid && email.touched" 
+                          class="validation">
+                            <small *ngIf="email.errors?.pattern">
+                                Invalid email address
+                            </small>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="bottom-cards-container w-100">
