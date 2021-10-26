@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class FoodService {
 
   private apiRoot: string = "https://api.spoonacular.com/recipes/complexSearch?";
-  public apiKey: string = "af86e6502834441e8973df21dcfd9348";
+  public apiKey: string = "9f58fdaad34b4e579d5328ccb40d394d";
 
   constructor(private http: HttpClient) {
   }

@@ -2,10 +2,11 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss'],
+  selector: 'app-booking-form',
+  templateUrl: './booking-form.component.html',
+  styleUrls: ['./booking-form.component.scss'],
   animations: [
     trigger('box', [
       transition(':enter', [
@@ -19,21 +20,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
     ])
   ]
 })
-export class ContactFormComponent implements OnInit {
+export class BookingFormComponent implements OnInit {
 
   form!: FormGroup;
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-  successMessage: boolean = false;
+  successBooking: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      fname: new FormControl('', [
-        Validators.required,
-        Validators.minLength(2)
-      ]),
-      lname: new FormControl('', [
+      name: new FormControl('', [
         Validators.required,
         Validators.minLength(2)
       ]),
@@ -41,9 +38,6 @@ export class ContactFormComponent implements OnInit {
         Validators.required,
         Validators.pattern(this.emailPattern)
       ]),
-      subject: new FormControl('', 
-        Validators.minLength(5)
-      ),
       message: new FormControl('', [
         Validators.required,
         Validators.minLength(15)
@@ -59,12 +53,12 @@ export class ContactFormComponent implements OnInit {
     if (this.form.valid) {
       this.form.reset();
       setTimeout(() => {
-        this.successMessage = true;
+        this.successBooking = true;
       }, 500);
       setTimeout(() => {
-        this.successMessage = false;
+        this.successBooking = false;
       }, 4500)
     } 
   }
-  
+
 }

@@ -9,7 +9,7 @@
         <ng-container *ngFor="let pasta of pastas">
             <div class="description-dish" >
                 <h2>{{ pasta.title | titlecase}}</h2>
-                <a routerLink="/menu">VIEW FULL MENU</a>
+                <a (click)="goToMenuPage()">VIEW FULL MENU</a>
             </div>
             <div>
                 <img src="{{ pasta.image }}">

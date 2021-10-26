@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { FoodService } from '../food.service';
 export class MenuComponent implements OnInit {
   pastas: any[] = [];
 
-  constructor(private foodService: FoodService) { }
+  constructor(private foodService: FoodService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.foodService.getPasta().then(
@@ -18,6 +20,10 @@ export class MenuComponent implements OnInit {
       },
       msg => console.error(`Error: ${msg.status} ${msg.statusText}`)
     );
+  }
+
+  goToMenuPage() {
+    this.router.navigate(['/menu'])
   }
 }
 

@@ -1,15 +1,25 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 interface ImagesList{
-  src:string;
+  src: string;
 }
 
 @Component({
   selector: 'app-slideshow',
   templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.scss']
+  styleUrls: ['./slideshow.component.scss'],
+  animations: [
+    trigger('box', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('1000ms ease-out')
+      ])
+    ])
+  ]
 })
 export class SlideshowComponent implements OnInit {
+  
   public slides: ImagesList[] = [
     {
       src:'/assets/img/two-plate-pasta.jpg',
@@ -21,6 +31,7 @@ export class SlideshowComponent implements OnInit {
       src:'/assets/img/pizza-lasagna.jpg', 
     },
   ];
+
   currentIndex: number = 0;
 
   constructor() { }
@@ -28,7 +39,7 @@ export class SlideshowComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.next();
-    }, 4000)  
+    }, 5000)  
   }
 
   next() {

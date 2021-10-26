@@ -2,7 +2,7 @@
     <section class="footer-container w-100 d-flex flex-column justify-content-center align-items-center">
         <div class="top-cards-container row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-5">
             <div class="welcome-card col">
-                <a href="home"><img src="/assets/img/logo-withe.svg" alt=""></a>
+                <a routerLink="/home"><img src="/assets/img/logo-withe.svg" alt=""></a>
                 <p>Dear guests, you are welcomed to dine with us at Il Sapore restaurant. Have a pleasant dining
                     experience.
                 </p>
@@ -10,10 +10,10 @@
             </div>
             <div class="links-card col">
                 <h3>Il Sapore</h3>
-                <a routerLink="#">Book a tabel</a>
-                <a routerLink="menu">Menu</a>
-                <a routerLink="about-us">About us</a>
-                <a routerLink="contact-us">Contact</a>
+                <a (click)="openDialog()">Book a tabel</a>
+                <a routerLink="/menu">Menu</a>
+                <a routerLink="/about-us">About us</a>
+                <a routerLink="/contact-us">Contact</a>
             </div>
             <div class="footer-address-card col">
                 <h3>Address</h3>

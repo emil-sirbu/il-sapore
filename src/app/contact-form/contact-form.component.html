@@ -1,7 +1,7 @@
 <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="submit()">
         <label for="fname">First Name<span>*</span></label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." formControlName="fname">
+        <input type="text" id="fname" name="firstname" placeholder="Your first name.." formControlName="fname">
         <div
           *ngIf="formInput.fname.touched" 
           class="validation">
@@ -63,5 +63,10 @@
         </div>
 
         <button type="submit" [disabled]="form.invalid">SEND</button>
+        <div class="succ-mess-container">
+            <small [@box] *ngIf="successMessage">
+                The message was sent successfully.
+            </small>
+        </div>
     </form>
 </div>
