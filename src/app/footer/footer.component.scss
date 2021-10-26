@@ -1,5 +1,5 @@
 .footer-container {
-    height: 450px;
+    padding-top: 40px;
     background-image: linear-gradient(70deg, rgba(84, 84, 84, 1) 45%, rgba(198, 164, 113, 0.5) 100%), url("/assets/img/made-pasta.jpg");
     background-size: cover;  
 }
@@ -66,6 +66,7 @@
 .links-card a:hover {
     color: #C6A471;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Address card */
@@ -102,14 +103,14 @@
 }
 
 .newsletter-card button {
-    background-color: #000;
+    background-color: rgb(42, 42, 42);
     color: rgba(198, 164, 113, 0.9);
     letter-spacing: 0.5px;
     cursor: pointer;
 }
 
 .newsletter-card button:hover {
-    background-color: rgb(32, 32, 32);
+    background-color: #000;
 }
 
 .validation {
@@ -144,10 +145,6 @@
 
 @media screen and (max-width: 1415px) {
 
-    .footer-container {
-        height: 750px;
-    }
-
     .top-cards-container {
         margin: 0 200px 70px 200px;
     }
@@ -162,10 +159,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-
-    .footer-container {
-        height: 850px;
-    }
 
     .top-cards-container {
         margin: 0 50px 70px 150px;
@@ -229,10 +222,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
-    .footer-container {
-        height: 950px;
-    }
 
     .top-cards-container {
         margin: 20px 30px 70px 30px;
