@@ -1,0 +1,25 @@
+<nav>
+    <div class="d-flex flex-column align-items-end pt-4 pe-4">
+        <button class="border-0 rounded-circle p-0 d-flex bg-transparent" (click)="onSidenavClose()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+        <div class="logo-section">
+            <img src="/assets/img/logo.svg" alt="Logo Il Sapore" class="">
+        </div>
+        <mat-nav-list class="nav-list d-flex flex-column justify-content-center">
+            <a routerLink="/home" (click)="onSidenavClose()">HOME</a>
+            <a routerLink="/about-us" (click)="onSidenavClose()">ABOUT US</a>
+            <a routerLink="/menu" (click)="onSidenavClose()">MENU</a>
+            <a routerLink="/contact-us" (click)="onSidenavClose()">CONTACT</a>
+        </mat-nav-list>
+        <div class="cta-section">
+            <a (click)="openDialog()" class="book-parent d-flex justify-content-center align-items-center">
+                <mat-icon class="restaurant-icon" aria-hidden="true" aria-label="Restaurant icon">restaurant</mat-icon>
+                <h3>BOOK A TABLE</h3>
+            </a>
+        </div>
+    </div>
+</nav>
+ 

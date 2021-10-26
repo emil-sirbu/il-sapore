@@ -15,6 +15,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatListModule } from '@angular/material/list';
+import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BookingFormComponent } from './booking-form/booking-form.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     ContactFormComponent,
     MenuPageComponent,
+    SidenavListComponent,
+    BookingFormComponent,
   ],
   entryComponents: [
     MenuPageComponent
@@ -39,6 +49,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatListModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

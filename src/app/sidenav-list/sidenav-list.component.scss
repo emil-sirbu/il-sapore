@@ -1,0 +1,48 @@
+mat-icon {
+    color: #C6A471;
+}
+
+.logo-section img {
+    width: 9em;
+    padding-bottom: 15px;
+}
+
+.nav-list a {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #C6A471; 
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.book-parent {
+    border: 2px solid #C6A471;
+    text-decoration: none;
+    padding: 15px 10px;
+}
+
+.restaurant-icon {
+    color: #C6A471;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
+}
+
+.book-parent h3 {
+    margin: 0 0 0 10px;
+    color: #C6A471;
+    letter-spacing: 1.8px;
+    font-size: initial;
+    font-weight: bold;
+    line-height: initial;
+}
+
+.book-parent:active {
+    border: 2px solid #545454;
+}
+
+.book-parent:active .restaurant-icon, 
+.book-parent:active h3 {
+    color: #545454;
+}
