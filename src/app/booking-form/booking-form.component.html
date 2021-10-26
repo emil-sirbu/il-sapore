@@ -1,0 +1,59 @@
+<mat-dialog-actions align="end">
+    <button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-dialog-actions>
+<mat-dialog-content>
+    <div class="form-container">
+        <div class="form-title">
+            <h3>Book a Table</h3>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <label for="name">Name<span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name.." formControlName="name">
+            <div
+              *ngIf="formInput.name.touched" 
+              class="validation">
+                <small *ngIf="formInput.name.errors?.required">
+                    The first name field can't be empty
+                </small>
+                <small *ngIf="formInput.name.errors?.minlength">
+                    The first name should have a minimum of {{formInput.name.errors?.minlength.requiredLength}} letters
+                </small>
+            </div>
+    
+            <label for="email">Email<span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="Your email address.." [pattern]="emailPattern" formControlName="email">
+            <div
+              *ngIf="formInput.email.invalid && formInput.email.touched" 
+              class="validation">
+                <small *ngIf="formInput.email.errors?.required">
+                    The email field can't be empty
+                </small>
+                <small *ngIf="formInput.email.errors?.pattern">
+                    Invalid email address
+                </small>
+            </div>
+    
+            <label for="message">Message<span>*</span></label>
+            <textarea type="text" id="message" name="message" placeholder="Write message.." formControlName="message"></textarea>
+            <div
+              *ngIf="formInput.message.touched" 
+              class="validation">
+                <small *ngIf="formInput.message.errors?.required">
+                    The message field can't be empty
+                </small>
+                <small *ngIf="formInput.message.errors?.minlength">
+                    The message should have a minimum of {{formInput.message.errors?.minlength.requiredLength}} characters
+                </small>
+            </div>
+    
+            <button type="submit" [disabled]="form.invalid">SEND</button>
+            <div class="succ-mess-container">
+                <small [@box] *ngIf="successBooking">
+                    The booking was sent successfully.
+                </small>
+            </div>
+        </form>
+    </div>
+</mat-dialog-content>

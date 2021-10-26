@@ -11,7 +11,8 @@
 
     .menu-parent a, 
     .book-parent h3,
-    .action-section .svg-icon {
+    .restaurant-icon,
+    .menu-icon {
         color: #C6A471;
     }
     
@@ -19,12 +20,25 @@
         border: 2px solid #C6A471;
     }
     
-    .menu-parent a:hover {
+    .menu-parent a:hover,
+    li.active-page a {
         color: #545454;
     }
     
     .book-parent:hover {
         border: 2px solid #545454;
+    }
+
+    .book-parent:hover .restaurant-icon,
+    .book-parent:hover h3 {
+        color: #545454;
+    }
+
+    @media screen and (max-width: 680px) {
+    
+        .logo-section img {
+            width: 9em;
+        }
     }
 }
 
@@ -44,7 +58,7 @@ header {
 }
 
 .main-section {
-    width: 40%;
+    width: 45%;
 }
 
 .main-section nav {
@@ -66,17 +80,23 @@ nav ul {
     letter-spacing: 1.8px;
 }
 
+.menu-parent a:hover,
+li.active-page a {
+    color: #545454;
+}
+
 .action-section {
-    width: 30%;
+    width: 25%;
 }
 
 .book-parent {
     border: 2px solid #fff;
     text-decoration: none;
     padding: 17px 10px;
+    cursor: pointer;
 }
 
-.book-parent .svg-icon {
+.restaurant-icon {
     color: #fff;
     font-size: 1em;
     width: 1em;
@@ -92,12 +112,19 @@ nav ul {
     line-height: initial;
 }
 
-.menu-parent a:hover {
+.book-parent:hover, 
+.book-parent:active {
+    border: 2px solid #545454;
+}
+
+.book-parent:hover .restaurant-icon,
+.book-parent:hover h3 {
     color: #545454;
 }
 
-.book-parent:hover {
-    border: 2px solid #545454;
+.menu-icon {
+    color: #fff;
+    transform: scale(1.7);
 }
 
 @media screen and (max-width: 1415px) {
@@ -107,6 +134,11 @@ nav ul {
         letter-spacing: 1px;
         padding: 10px 5px;
     }
+
+    .action-section {
+        width: 33%;
+    }
+
     .book-parent h3 {
         font-size: 1em;
         letter-spacing: 1px;
@@ -114,19 +146,24 @@ nav ul {
 }
 
 @media screen and (max-width: 1050px) {
-   
-    .burger-menu img {
-        width: 3em;
+
+    .main-section {
+        width: 55%;
     }
 }
 
 @media screen and (max-width: 680px) {
 
-    .logo-section img {
-        width: 10em;
+    .main-section {
+        width: 40%;
     }
 
-    .burger-menu img {
-        width: 2.5em;
+    .logo-section img {
+        width: 9em;
+    }
+
+    .menu-icon {
+        margin-right: 10px;
+        transform: scale(1.5);
     }
 }

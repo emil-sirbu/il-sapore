@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookingFormComponent } from '../booking-form/booking-form.component';
 
 @Component({
   selector: 'app-homepage',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
   
   ngOnInit() {}
+
+  openDialog() {
+    this.dialog.open(BookingFormComponent);
+  }
 
 }

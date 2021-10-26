@@ -1,34 +1,36 @@
 <header class="header-section position-absolute w-100 d-flex justify-content-around align-items-center">
     <div class="logo-section">
-        <a routerLink="#">
+        <a routerLink="/home">
             <img src="/assets/img/logo.svg" alt="Logo Il Sapore" class="my-3">
         </a>
     </div>
     <div class="main-section d-flex justify-content-lg-around align-items-center justify-content-end">
         <nav class="d-none d-lg-block">
             <ul class="nav-parent d-flex justify-content-around">
-                <li class="menu-parent">
-                    <a routerLink="home">HOME</a>
+                <li class="menu-parent" routerLinkActive="active-page">
+                    <a routerLink="/home">HOME</a>
                 </li>
-                <li class="menu-parent">
-                    <a routerLink="about-us">ABOUT US</a>
+                <li class="menu-parent" routerLinkActive="active-page">
+                    <a routerLink="/about-us">ABOUT US</a>
                 </li>
-                <li class="menu-parent">
-                    <a routerLink="menu">MENU</a>
+                <li class="menu-parent" routerLinkActive="active-page">
+                    <a routerLink="/menu">MENU</a>
                 </li>
-                <li class="menu-parent">
-                    <a routerLink="contact-us">CONTACT</a>
+                <li class="menu-parent" routerLinkActive="active-page">
+                    <a routerLink="/contact-us">CONTACT</a>
                 </li>
             </ul>
         </nav>
         <div class="action-section d-none d-lg-block">
-            <a href="#" class="book-parent d-flex justify-content-center align-items-center">
-                <mat-icon class="svg-icon" aria-hidden="true" aria-label="Restaurant icon">restaurant</mat-icon>
+            <a (click)="openDialog()" class="book-parent d-flex justify-content-center align-items-center">
+                <mat-icon class="restaurant-icon" aria-hidden="true" aria-label="Restaurant icon">restaurant</mat-icon>
                 <h3>BOOK A TABLE</h3>
             </a>
         </div>
         <div class="burger-menu d-lg-none">
-            <img src="/assets/img/menu_white_burger.svg" alt="">
+            <button class="border-0 rounded-circle p-0 d-flex bg-transparent" (click)="onToggleSidenav()">
+                <mat-icon class="menu-icon" aria-hidden="true">menu</mat-icon>
+            </button>                        
         </div>
     </div>
 </header>
