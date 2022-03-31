@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
+import { DishesHome } from '../models/dishes-home';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,21 +10,20 @@ import { FoodService } from '../food.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  pastas: any[] = [];
+  pastas: DishesHome[] = [];
 
   constructor(private foodService: FoodService,
               private router: Router) { }
 
   ngOnInit(): void {
-    this.foodService.getPasta().then(
-      data => {
+    this.foodService.getPasta().subscribe((data) => { 
         this.pastas = data.results;
-      },
-      msg => console.error(`Error: ${msg.status} ${msg.statusText}`)
-    );
+      }, (error) => {
+        console.error(`Error: ${error}`);
+      });
   }
 
-  goToMenuPage() {
+  goToMenuPage() { 
     this.router.navigate(['/menu'])
   }
 }

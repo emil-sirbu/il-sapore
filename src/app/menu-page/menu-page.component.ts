@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../food.service';
+import { DishesMenu } from '../models/dishes-menu';
 
 @Component({
   selector: 'app-menu-page',
@@ -8,24 +9,22 @@ import { FoodService } from '../food.service';
 })
 export class MenuPageComponent implements OnInit {
 
-  pizzas: any[] = [];
-  pastas: any[] = [];
+  pizzas: DishesMenu[] = [];
+  pastas: DishesMenu[] = [];
 
   constructor(private foodService: FoodService) { }
 
   ngOnInit(): void {
-    this.foodService.getPizza().then(
-      data => {
+    this.foodService.getPizza().subscribe((data) => {
         this.pizzas = data.results; 
-      },
-      msg => console.error(`Error: ${msg.status} ${msg.statusText}`)
-    );  
+      }, (error: any) => {
+        console.error(`Error: ${error}`);
+      });  
       
-    this.foodService.getPastaMenu().then(
-      data => {
+    this.foodService.getPastaMenu().subscribe((data) => {
         this.pastas = data.results;
-      },
-      msg => console.error(`Error: ${msg.status} ${msg.statusText}`)
-    );  
+      }, (error: any) => {
+        console.error(`Error: ${error}`);
+      });  
   }
 }

@@ -1,5 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ReqDishesHome } from './models/request-dishes-home';
+import { ReqDishesMenu } from './models/request-dishes-menu';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +17,7 @@ export class FoodService {
   }
 
   // Home
-  getPasta(): Promise<any> {
+  getPasta(): Observable<ReqDishesHome> {
     let apiUrl = `${this.apiRoot}/get`;
     const apiQuery = {
       params: new HttpParams()
@@ -22,11 +26,12 @@ export class FoodService {
         .set("apiKey", `${this.apiKey}`)
     };
 
-    return this.http.get(apiUrl, apiQuery).toPromise();
+    return this.http.get<ReqDishesHome>(apiUrl, apiQuery)
+                    .pipe(catchError(this.handleError));
   }
 
   // Menu
-  getPizza(): Promise<any> {
+  getPizza(): Observable<ReqDishesMenu> {
     let apiUrl = `${this.apiRoot}/get`;
     const apiQuery = {
       params: new HttpParams()
@@ -36,10 +41,11 @@ export class FoodService {
         .set("apiKey", `${this.apiKey}`)
     };
 
-    return this.http.get(apiUrl, apiQuery).toPromise();
+    return this.http.get<ReqDishesMenu>(apiUrl, apiQuery)
+                    .pipe(catchError(this.handleError));
   }
 
-  getPastaMenu(): Promise<any> {
+  getPastaMenu(): Observable<ReqDishesMenu> {
     let apiUrl = `${this.apiRoot}/get`;
     const apiQuery = {
       params: new HttpParams()
@@ -49,6 +55,12 @@ export class FoodService {
         .set("apiKey", `${this.apiKey}`)
     };
 
-    return this.http.get(apiUrl, apiQuery).toPromise();
+    return this.http.get<ReqDishesMenu>(apiUrl, apiQuery)
+                    .pipe(catchError(this.handleError));
+  }
+
+  // Handle Error
+  handleError(error: any) {
+    return throwError(error.message || "Server Error");
   }
 }
