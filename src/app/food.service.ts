@@ -34,7 +34,7 @@ export class FoodService {
   getPizza(): Observable<ReqDishesMenu> {
     let apiUrl = `${this.apiRoot}/get`;
     const apiQuery = {
-      params: new HttpParams()
+      params: new HttpParams() 
         .set("query", "pizza")
         .set("fillIngredients", "true")
         .set("number", "8")
