@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { BookingFormComponent } from '../booking-form/booking-form.component';
 
@@ -10,12 +10,12 @@ import { BookingFormComponent } from '../booking-form/booking-form.component';
 })
 export class FooterComponent {
 
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   email!: AbstractControl;
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
   constructor(public dialog: MatDialog, 
-                         fb: FormBuilder) {
+                         fb: UntypedFormBuilder) {
       this.form = fb.group({
         'email': ['', [
           Validators.pattern(this.emailPattern)

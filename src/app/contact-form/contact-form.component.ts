@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -21,30 +21,30 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactFormComponent implements OnInit {
 
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   successMessage: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      fname: new FormControl('', [
+    this.form = new UntypedFormGroup({
+      fname: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2)
       ]),
-      lname: new FormControl('', [
+      lname: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2)
       ]),
-      email: new FormControl('', [
+      email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(this.emailPattern)
       ]),
-      subject: new FormControl('', 
+      subject: new UntypedFormControl('', 
         Validators.minLength(5)
       ),
-      message: new FormControl('', [
+      message: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(15)
       ])

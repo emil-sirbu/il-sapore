@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -22,23 +22,23 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class BookingFormComponent implements OnInit {
 
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   successBooking: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      name: new FormControl('', [
+    this.form = new UntypedFormGroup({
+      name: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2)
       ]),
-      email: new FormControl('', [
+      email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(this.emailPattern)
       ]),
-      message: new FormControl('', [
+      message: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(15)
       ])
