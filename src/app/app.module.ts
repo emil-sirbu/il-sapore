@@ -26,37 +26,34 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomepageComponent,
-    AboutUsComponent,
-    ContactUsComponent,
-    HeaderComponent,
-    FooterComponent,
-    SlideshowComponent,
-    MenuComponent,
-    ContactFormComponent,
-    MenuPageComponent,
-    SidenavListComponent,
-    BookingFormComponent,
-  ],
-  entryComponents: [
-    MenuPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatListModule,
-    MatDialogModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomepageComponent,
+        AboutUsComponent,
+        ContactUsComponent,
+        HeaderComponent,
+        FooterComponent,
+        SlideshowComponent,
+        MenuComponent,
+        ContactFormComponent,
+        MenuPageComponent,
+        SidenavListComponent,
+        BookingFormComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatSlideToggleModule,
+        MatListModule,
+        MatDialogModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
